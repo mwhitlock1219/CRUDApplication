@@ -37,7 +37,6 @@ The basics of validating a Java bean with the standard framework – JSR 380, al
     <artifactId>javax.el-api</artifactId>
     <version>3.0.0</version>
 </dependency>
- 
 <dependency>
     <groupId>org.glassfish.web</groupId>
     <artifactId>javax.el</artifactId>
@@ -46,4 +45,6 @@ The basics of validating a Java bean with the standard framework – JSR 380, al
 
 - import using the "javax.validation.constraints."
 
-
+# Repository Layer
+1. Create UserRespository.java in main (make as interface not class!)
+2. extend CrudRepository to UserRepository interface

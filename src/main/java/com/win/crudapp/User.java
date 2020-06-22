@@ -27,6 +27,13 @@ public class User {
         this.email = email;
     }
     
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
     public String getName() {
         return name;
     }
@@ -47,5 +54,7 @@ public class User {
     public String toString() {
         return "User [email=" + email + ", id=" + id + ", name=" + name + "]";
     }
+
+    
     
 }
