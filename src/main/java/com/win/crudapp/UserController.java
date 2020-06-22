@@ -35,14 +35,13 @@ public class UserController {
         // Saves user data to database and redirects user to "redirect:/index"
         userRepository.save(user);
         model.addAttribute("users", userRepository.findAll());
-        return "redirect:/index";
+        return "/index";
     }
 
     @GetMapping("/edit/{id}")
     public String showUpdateForm(@PathVariable("id") long id, Model model) {
         User user = userRepository.findById(id)
                 .orElseThrow(() -> new IllegalArgumentException("Invalid user Id:" + id));
-
         model.addAttribute("user", user);
         return "update-user";
     }
@@ -53,7 +52,6 @@ public class UserController {
             user.setId(id);
             return "update-user";
         }
-
         userRepository.save(user);
         model.addAttribute("users", userRepository.findAll());
         return "redirect:/index";

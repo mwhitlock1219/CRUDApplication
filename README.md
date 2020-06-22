@@ -48,3 +48,9 @@ The basics of validating a Java bean with the standard framework – JSR 380, al
 # Repository Layer
 1. Create UserRespository.java in main (make as interface not class!)
 2. extend CrudRepository to UserRepository interface
+
+# View Layer
+Add under template
+- add-user.html
+- update-user.html
+- index.html
